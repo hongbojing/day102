@@ -1,13 +1,28 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>day #</title>
-  <link rel="stylesheet" href="css/myStyle.css">
-  <link rel="stylesheet" href="css/anotherstyle.css">
+    <meta charset="UTF-8">
+    <title>day #</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
-<body>
+<body ng-app="myApp">
+<div ng-controller="myController as myCtrl">
+    <!--<table>-->
+        <!--<tr>-->
+            <!--<th>-->
+                <!--<a href="" ng-click="order('name')">Name</a>-->
+            <!--</th>-->
+        <!--</tr>-->
+    <!--</table>-->
+    <div ng-repeat="data in myCtrl.names" ng-class="{well:$even}">
+        <p>Name: {{data.Name}}</p>
+        <p>City: {{data.City}}</p>
+        <p>Country: {{data.Country}}</p>
+    </div>
+</div>
 
+<script src="js/lib/angular/angular.min.js"></script>
+<script src="js/app.js"></script>
 <!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
 </body>
 </html>
